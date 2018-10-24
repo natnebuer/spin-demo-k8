@@ -1,0 +1,45 @@
+{
+  "parameters": {
+    "namespace": "pr-11",
+    "branch-name": "master"
+  },
+  "artifacts": [
+    {
+      "name": "manifests/configmap.yml",
+      "reference": "https://api.github.com/repos/natnebuer/spin-kub-v2-demo/contents/manifests/configmap.yml",
+      "type": "github/file"
+    },
+    {
+      "name": "enginex.azurecr.io/busybox",
+      "reference": "enginex.azurecr.io/busybox:qa",
+      "type": "docker/image",
+      "version": "qa"
+    },
+    {
+      "name": "enginex.azurecr.io/spin-kub-v2-demo",
+      "reference": "enginex.azurecr.io/spin-kub-v2-demo:qa",
+      "type": "docker/image",
+      "version": "qa"
+    },
+    {
+      "name": "manifests/secrets.yml",
+      "reference": "https://api.github.com/repos/natnebuer/spin-kub-v2-demo/contents/manifests/secrets.yml",
+      "type": "github/file"
+    },
+    {
+      "name": "manifests/demo.yml",
+      "reference": "https://api.github.com/repos/natnebuer/spin-kub-v2-demo/contents/manifests/demo.yml",
+      "type": "github/file"
+    },
+    {
+      "name": "manifests/db-migrate.yml",
+      "reference": "https://api.github.com/repos/natnebuer/spin-kub-v2-demo/contents/manifests/db-migrate.yml",
+      "type": "github/file"
+    },
+    {
+      "name": "manifests/namespace.yml",
+      "reference": "https://api.github.com/repos/natnebuer/spin-kub-v2-demo/contents/manifests/namespace.yml",
+      "type": "github/file"
+    }
+  ]
+}

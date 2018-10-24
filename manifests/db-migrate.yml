@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: website-demo-db-migrate
+  namespace: '${ parameters.namespace }'
+spec:
+  backoffLimit: 5
+  template:
+    metadata:
+      labels:
+        app: website-demo-db-migrate
+        run: website-demo-db-migrate
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: demo-db-migrate
+        image: enginex.azurecr.io/busybox
+        imagePullPolicy: Always
+        command: ["/bin/sh"]
+        args: ["-c", "sleep 5 && exit 0 "]
+        env:
+        - name: USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: username
+      imagePullSecrets:
+      - name: azure-enginex-registry
