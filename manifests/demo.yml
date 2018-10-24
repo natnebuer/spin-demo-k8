@@ -45,7 +45,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: spinnaker-demo
-  namespace: demo-website
+  namespace: '${ parameters.namespace }'
 spec:
   selector:
     source: demo
