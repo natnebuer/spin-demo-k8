@@ -6,3 +6,4 @@ metadata:
 data:
   NEW_FEATURE: "true"
   FLAG_FEATURE: "true"
+  VERY_FLAG_FEATURE: "add back"
