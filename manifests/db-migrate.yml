@@ -1,15 +1,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: website-demo-db-migrate
+  name: app-db-migrate
   namespace: '${ parameters.namespace }'
 spec:
   backoffLimit: 5
   template:
     metadata:
       labels:
-        app: website-demo-db-migrate
-        run: website-demo-db-migrate
+        app: app-db-migrate
+        run: app-db-migrate
     spec:
       restartPolicy: Never
       containers:
