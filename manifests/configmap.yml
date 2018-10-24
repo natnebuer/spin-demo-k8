@@ -6,4 +6,3 @@ metadata:
 data:
   NEW_FEATURE: "true"
   FLAG_FEATURE: "true"
-  NEWER_FLAG_FEATURE: "true"
