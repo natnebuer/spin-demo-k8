@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: notify-api-dev-ingress
+  namespace: '${ parameters.namespace }'
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: '${ parameters.hosturl }'
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: spinnaker-demo
+          servicePort: 80
