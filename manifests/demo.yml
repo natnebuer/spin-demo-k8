@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: primary
-        image: enginex.azurecr.io/awesome-app
+        image: enginex.azurecr.io/awesome-app-dev
         ports:
         - containerPort: 8000
         readinessProbe:
