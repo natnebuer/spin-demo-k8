@@ -4,19 +4,19 @@ metadata:
   name: spinnaker-demo
   namespace: '${ parameters.namespace }'
   labels:
-    source: demo-2
+    source: demo
     stack: frontend
     app: spinnaker
 spec:
   replicas: 3
   selector:
     matchLabels:
-      source: demo-2
+      source: demo
       app: spinnaker
   template:
     metadata:
       labels:
-        source: demo-2
+        source: demo
         app: spinnaker
     spec:
       containers:
@@ -48,7 +48,7 @@ metadata:
   namespace: '${ parameters.namespace }'
 spec:
   selector:
-    source: demo-2
+    source: demo
     app: spinnaker
   ports:
   - protocol: TCP
