@@ -2,7 +2,6 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: app-db-migrate
-  namespace: '${ parameters.namespace }'
 spec:
   backoffLimit: 5
   template:
